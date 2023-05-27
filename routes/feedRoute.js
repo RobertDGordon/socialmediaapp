@@ -12,6 +12,7 @@ router.get('/posts/:id', (req, res) => {
   feedController.getPostById(req, res) //route traffic with :id to getPostsById controller
 })
 
+//route to create a post
 router.post('/posts/add', (req, res) => {
   feedController.addPost(req, res)
 })

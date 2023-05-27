@@ -31,6 +31,7 @@ const addPost = (req, res) => {
     const result = db.addPost(data)
     res.status(201).json({ result: "Post created!", databaseLength: result })
   } else { //else correct data properties don't exist, return error 400
+    console.log("Error! Invalid post data!")
     res.status(400).json({ error: `Incorrect post data!`})
   }
 }
