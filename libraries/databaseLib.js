@@ -29,6 +29,21 @@ class Database {
     return result
   }
 
+  //add post
+  addPost(data){
+    this.#log(data.title)
+    const newId = `${posts.length + 1}` //creates a new id based on the length of the array, set as string
+    const newUrl = data.imgUrl ? data.imgUrl : "https://placehold.co/400x300" //ternary statement, if data.imgUrl, then use first block, else use second block
+    const newPost = {
+      id: newId, //sets the id to newId
+      ...data, //uses spread operator to "spread" data key/value pairs into a new object
+      imgUrl: newUrl //add the new image url
+    }
+
+    posts.push(newPost) //push newPost into the array
+    return posts.length //return the length of the new array
+  }
+
 }
 
 module.exports = Database;

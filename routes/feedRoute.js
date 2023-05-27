@@ -12,4 +12,8 @@ router.get('/posts/:id', (req, res) => {
   feedController.getPostById(req, res) //route traffic with :id to getPostsById controller
 })
 
+router.post('/posts/add', (req, res) => {
+  feedController.addPost(req, res)
+})
+
 module.exports = router;
