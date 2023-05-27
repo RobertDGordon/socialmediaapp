@@ -37,7 +37,7 @@ class Database {
     const newPost = {
       id: newId, //sets the id to newId
       ...data, //uses spread operator to "spread" data key/value pairs into a new object
-      imgUrl: newUrl //add the new image url
+      imgUrl: newUrl, //add the new image url
     }
 
     posts.push(newPost) //push newPost into the array
