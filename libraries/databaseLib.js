@@ -29,6 +29,17 @@ class Database {
     return result
   }
 
+  //returns post by title
+  postsByTitle(title){
+    this.#log(title)
+    const result = posts.filter((post) => {
+      if(post.title === title){
+        return post
+      }
+    })
+    return result
+  }
+
   //add post
   addPost(data){
     this.#log(data.title)

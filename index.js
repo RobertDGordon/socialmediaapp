@@ -8,7 +8,7 @@ const port = 3000 //define our port here
 app.use(express.json()); //tells the app to parse json automatically
 
 //define endpoints here where traffic will go
-app.use("/", express.static('public')) //serves any files located in the /public folder
+app.use("/", express.static('./')) //serves any files located in the /public folder
 app.use("/feed", feedRoute); //routes traffic pointed at localhost:3000/feed to this router
 
 app.listen(port, ()=> {
